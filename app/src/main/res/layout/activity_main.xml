@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.057"
-        tools:srcCompat="@drawable/family" />
+        android:src="@drawable/family" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -116,15 +116,15 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
         android:text="Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/profileimage"
         android:layout_width="69dp"
         android:layout_height="52dp"
         android:layout_marginTop="4dp"
@@ -132,18 +132,18 @@
         app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/guideline2"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/user" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:text="Upload Image"
         android:textColor="#EB9069"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="@+id/profileimage"
+        app:layout_constraintStart_toStartOf="@+id/profileimage"
+        app:layout_constraintTop_toBottomOf="@+id/profileimage" />
 
     <ProgressBar
         android:id="@+id/progressBar"
