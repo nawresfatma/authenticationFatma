@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "80150549200",
-    "firebase_url": "https://stage-1212c.firebaseio.com",
-    "project_id": "stage-1212c",
-    "storage_bucket": "stage-1212c.appspot.com"
+    "project_number": "723314270945",
+    "firebase_url": "https://nawresfatma-60279.firebaseio.com",
+    "project_id": "nawresfatma-60279",
+    "storage_bucket": "nawresfatma-60279.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:80150549200:android:3ce8f6b8edf0905fb9c4d5",
+        "mobilesdk_app_id": "1:723314270945:android:c24fc46ed1900c32090da0",
         "android_client_info": {
-          "package_name": "com.tynass.stage"
+          "package_name": "com.example.authenticationfatmaa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "80150549200-oi0f9juubburajvsvpcrvehj0hsih509.apps.googleusercontent.com",
+          "client_id": "723314270945-ppia0delri5tg2q782v5r6cqvp56a28h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDJw5eGXsux3kupgwCQBHSIaAqge17Q2j0"
+          "current_key": "AIzaSyCkyEckAwkmE08UPtVeH4M5cEZzSj2ijQI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "80150549200-oi0f9juubburajvsvpcrvehj0hsih509.apps.googleusercontent.com",
+              "client_id": "723314270945-ppia0delri5tg2q782v5r6cqvp56a28h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

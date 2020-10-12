@@ -32,17 +32,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.057"
-        tools:srcCompat="@drawable/family" />
+        android:src="@drawable/family" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="675dp"
 
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline1"
-        app:srcCompat="@drawable/rectangle" />
+        android:src="@drawable/rectangle" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -116,12 +118,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
         android:text="Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -132,7 +134,7 @@
         app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/guideline2"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
 
     <TextView
         android:id="@+id/textView6"

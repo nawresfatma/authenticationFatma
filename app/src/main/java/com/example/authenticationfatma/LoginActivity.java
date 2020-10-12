@@ -131,17 +131,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
             mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
