@@ -6,7 +6,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.authenticationfatma"
+        applicationId "com.example.authenticationfatmaa"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
