@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
+   /*haja*/
     private void uploadPicture() {
          final ProgressDialog pd = new ProgressDialog(this);
          pd.setTitle("Uploading..");
