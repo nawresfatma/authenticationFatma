@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-   /*haja*/
+
     private void uploadPicture() {
          final ProgressDialog pd = new ProgressDialog(this);
          pd.setTitle("Uploading..");
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        pd.dismiss();
+                        //pd.dismiss();
                    Snackbar.make(findViewById(android.R.id.content),"Image Uploaded.", Snackbar.LENGTH_LONG).show();
 
                     }
