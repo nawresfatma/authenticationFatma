@@ -16,7 +16,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -43,7 +42,7 @@ import com.google.firebase.database.annotations.Nullable;
 
 
 public class LoginActivity extends AppCompatActivity {
-   private CallbackManager callbackManager ;
+    private CallbackManager callbackManager ;
     private SignInButton signInButton;
     private GoogleSignInClient mGoogleSignInClient;
     private  String TAG = "LoginActivity";
@@ -62,7 +61,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         signInButton = findViewById(R.id.signInButton);
         progress2 = findViewById(R.id.progressBar2);
         submit = findViewById(R.id.signIn);
@@ -102,9 +100,9 @@ public class LoginActivity extends AppCompatActivity {
                 else {
                     updateUI(null);
                 }
-                }
+            }
 
-            };
+        };
 
         accessTokenTracker=new AccessTokenTracker() {
             @Override
@@ -133,7 +131,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-            mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+
+
+
+
+
+
+
+
+
+
+
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser mFirebaseUser = mAuth.getCurrentUser();
@@ -144,51 +153,52 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         };
-    but2.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String Email =email.getText().toString();
-            String Pwd = pwd.getText().toString();
-            if(Email.isEmpty()){
-                email.setError("Please enter email id");
-                email.requestFocus();
-            }else if (Pwd.isEmpty()){
-                pwd.setError("please enter your password");
-                pwd.requestFocus();
-            }
-            else if (Pwd.isEmpty() && Email.isEmpty() ){
-                Toast.makeText(LoginActivity.this, "enter your email and password", Toast.LENGTH_SHORT).show();
-            }
-            else if( !(Pwd.isEmpty() && Email.isEmpty() )) {
-                progress2.setVisibility(View.VISIBLE);
-                mAuth.signInWithEmailAndPassword(Email,Pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(!task.isSuccessful()){
-                            progress2.setVisibility(View.GONE);
-                            Toast.makeText(LoginActivity.this, "login error , please login again!", Toast.LENGTH_SHORT).show();
+        but2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String Email =email.getText().toString();
+                String Pwd = pwd.getText().toString();
+                if(Email.isEmpty()){
+                    email.setError("Please enter email id");
+                    email.requestFocus();
+                }else if (Pwd.isEmpty()){
+                    pwd.setError("please enter your password");
+                    pwd.requestFocus();
+                }
+                else if (Pwd.isEmpty() && Email.isEmpty() ){
+                    Toast.makeText(LoginActivity.this, "enter your email and password", Toast.LENGTH_SHORT).show();
+                }
+                else if( !(Pwd.isEmpty() && Email.isEmpty() )) {
+                    progress2.setVisibility(View.VISIBLE);
+                    mAuth.signInWithEmailAndPassword(Email,Pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(!task.isSuccessful()){
+                                progress2.setVisibility(View.GONE);
+                                Toast.makeText(LoginActivity.this, "login error , please login again!", Toast.LENGTH_SHORT).show();
 
 
-                        }else{
-                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                            }else{
+                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 
+                            }
                         }
-                    }
-                });
-            }else {
-                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    });
+                }else {
+                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 
 
-                        }
-                    }
-    });
-       textView2.setOnClickListener(new View.OnClickListener() {
+                }
+            }
+        });
+        textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(LoginActivity.this,MainActivity.class);
                 startActivity(i);
             }
         });
+
     }
 
     private void handleFacebookToken(AccessToken token) {
@@ -201,6 +211,7 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d(Tag,"signin with crendetial : successful");
                     FirebaseUser user = mAuth.getCurrentUser();
                     updateUI(user);
+                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }else{
 
                 }
@@ -285,8 +296,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
-
 
 }
 
