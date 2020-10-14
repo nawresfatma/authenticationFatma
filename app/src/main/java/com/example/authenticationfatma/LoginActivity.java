@@ -213,7 +213,10 @@ public class LoginActivity extends AppCompatActivity {
                     updateUI(user);
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }else{
-
+                    Log.w(TAG, "signInWithCredential:failure", task.getException());
+                    Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show();
+                    updateUI(null);
                 }
             }
         });
@@ -223,6 +226,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthStateListener);
+
     }
 
     private void signIn(){
