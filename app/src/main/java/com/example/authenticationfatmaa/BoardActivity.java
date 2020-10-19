@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,20 @@ public class BoardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
+        //FirstTimeInstall
+        SharedPreferences preferences = getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+        String FirstTime=preferences.getString("FirstTimeInstall","");
 
+        if(FirstTime.equals("yes")) {
+            Intent intent=new Intent(BoardActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
+        else {
+
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("FirstTimeInstall", "yes");
+            editor.apply();
+        }
 
         layoutonboardingIndicator = findViewById(R.id.lay_onbord);
         setupOnboardingItem();
