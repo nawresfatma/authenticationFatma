@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        //ddd
         <activity android:name="com.example.authenticationfatmaa.BoardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

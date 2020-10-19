@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
  Button but3;
+ //FFF
  FirebaseAuth mAuth ;
  private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
