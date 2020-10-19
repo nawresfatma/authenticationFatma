@@ -1,4 +1,4 @@
-package com.example.authenticationfatma;
+package com.example.authenticationfatmaa;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.authenticationfatma.R;
+import com.example.authenticationfatmaa.R;
 
 import java.util.ArrayList;
 import java.util.List;
