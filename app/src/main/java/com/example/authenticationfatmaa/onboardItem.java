@@ -1,4 +1,4 @@
-package com.example.authenticationfatma;
+package com.example.authenticationfatmaa;
 
 public class onboardItem {
     private int image;

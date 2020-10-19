@@ -1,4 +1,4 @@
-package com.example.authenticationfatma;
+package com.example.authenticationfatmaa;
 
 public class User {
     String fullname , email,password;
